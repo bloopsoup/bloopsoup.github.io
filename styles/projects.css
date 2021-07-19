@@ -26,10 +26,6 @@ nav a {
     color: white;
     margin: 0 0.625rem 0 0.625rem;
 }
-nav a:hover {
-    background-color: white;
-    color: black;
-}
 
 .main-column {
     display: grid;
@@ -73,9 +69,7 @@ section a {
     margin: 0.5rem 1.5rem;
     padding: 0.5rem 3rem;
 }
-section a:hover {
-    color: #fcff91;
-}
+
 section hr {
     background-color: #969696;
     border: 0;
@@ -99,6 +93,17 @@ section hr {
 }
 
 /* MEDIA QUERIES */
+
+@media (hover: hover) {
+    nav a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    section a:hover {
+        color: #fcff91;
+    }
+}
 
 @media screen {
     header h1 {
