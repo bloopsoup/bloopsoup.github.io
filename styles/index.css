@@ -1,0 +1,214 @@
+/* Specific styling for the homepage. */
+
+main {
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/* FLEXBOX SUB-ELEMENTS */
+
+header {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+
+    text-align: center;
+    margin: 0;
+}
+header h1 {
+    position: relative;
+
+    margin: 0;
+    transition: color 0.5s;
+    animation: floaty 1.4s infinite alternate;
+}
+header h1:hover {
+    color: #5a9296;
+}
+@keyframes floaty {
+    from {bottom: 0;}
+    to {bottom: 0.6rem;}
+}
+
+nav {
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.625rem 0 0 0;
+}
+nav a {
+    position: relative;
+    color: black;
+
+    bottom: 0;
+    transition: bottom 0.5s;
+}
+nav a:hover {
+    background-color: black;
+    color: white;
+    bottom: 0.15rem;
+}
+
+/* DECORATION. Note that these are absolute relative to the header. */
+
+.deco {
+    position: absolute;
+}
+.block1 {
+    animation: up1 1.3s infinite alternate;
+}
+.block2 {
+    animation: up2 0.8s infinite alternate;
+}
+.circle {
+    background-color: #cecece;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+/* MEDIA QUERIES */
+
+@media screen {
+    header h1 {
+        font-size: 8rem;
+        line-height: 7rem;
+    }
+
+    nav a {
+        margin: 0 0.625rem 0.625rem 0.625rem;
+    }
+
+    .block1 {
+        bottom: 100px;
+        right: -5%;
+    }
+    @keyframes up1 {
+        from {bottom: 100px;}
+        to {bottom: 105px;}
+    }
+    .block2 {
+        bottom: 160px;
+        right: 7%;
+        height: 3rem;
+        width: 3rem;
+    }
+    @keyframes up2 {
+        from {bottom: 160px;}
+        to {bottom: 166px;}
+    }
+    .c1 {
+        left: -12%;
+        height: 9rem;
+        width: 9rem;
+        bottom: 111px;
+    }
+    .c2 {
+        left: -20%;
+        height: 6rem;
+        width: 6rem;
+        bottom: 50px;
+    }
+}
+
+@media screen and (max-width:50rem) {
+    header h1 {
+        font-size: 5rem;
+        line-height: 4.5rem;
+    }
+
+    nav a {
+        margin: 0 0.4rem 0.4rem 0.4rem;
+        font-size: 1.5rem;
+    }
+
+    .ground-scale {
+        width: 25rem;
+    }
+
+    .block1 {
+        bottom: 70px;
+        right: -2%;
+        height: 3rem;
+        width: 3rem;
+    }
+    @keyframes up1 {
+        from {bottom: 70px;}
+        to {bottom: 75px;}
+    }
+    .block2 {
+        bottom: 120px;
+        right: 11%;
+        height: 2rem;
+        width: 2rem;
+    }
+    @keyframes up2 {
+        from {bottom: 120px;}
+        to {bottom: 125px;}
+    }
+    .c1 {
+        left: 0%;
+        height: 7rem;
+        width: 7rem;
+        bottom: 111px;
+    }
+    .c2 {
+        left: -10%;
+        height: 4rem;
+        width: 4rem;
+        bottom: 80px;
+    }
+}
+
+@media screen and (max-width:31.25rem) {
+    header h1 {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+
+    nav {
+        flex-flow: column;
+    }
+    nav a {
+        margin: 0 0.4rem 0.4rem 0.4rem;
+        font-size: 1.3rem;
+    }
+
+    .ground-scale {
+        width: 15rem;
+    }
+
+    .block1 {
+        bottom: 40px;
+        right: -5%;
+        height: 2rem;
+        width: 2rem;
+    }
+    @keyframes up1 {
+        from {bottom: 40px;}
+        to {bottom: 45px;}
+    }
+    .block2 {
+        bottom: 70px;
+        right: 10%;
+        height: 1rem;
+        width: 1rem;
+    }
+    @keyframes up2 {
+        from {bottom: 70px;}
+        to {bottom: 75px;}
+    }
+    .c1 {
+        left: -10%;
+        height: 5rem;
+        width: 5rem;
+        bottom: 60px;
+    }
+    .c2 {
+        left: -13%;
+        height: 2rem;
+        width: 2rem;
+        bottom: 45px;
+    }
+}

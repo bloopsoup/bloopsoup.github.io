@@ -1,0 +1,175 @@
+/* Styling for the projects page. Used GRID for centering. */
+
+main {
+    min-height: 100vh;
+}
+
+/* FLEXBOX SUB-ELEMENTS */
+
+header {
+    margin: 1rem 0 0 0;
+    padding: 0 1rem 0 1rem;
+}
+header h1 {
+    margin: 0;
+}
+
+nav {
+    padding: 0;
+    background-color: black;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+nav a {
+    color: white;
+    margin: 0 0.625rem 0 0.625rem;
+}
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+.main-column {
+    display: grid;
+    justify-content: center;
+}
+section {
+    position: relative;
+
+    margin: 0 3.5rem 0 3.5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+    max-width: 70rem;
+    bottom: 0;
+}
+section h2 {
+    font-family: JostBB, verdana;
+    color: black;
+    margin: 0;
+}
+section p {
+    font-family: Jost, verdana;
+    color: black;
+    margin: 0.5rem 0 1rem 0;
+}
+section ul {
+    font-family: Jost, verdana;
+    color: black;
+
+    margin: 0 0 1rem 0;
+}
+section li {
+    margin: 0 0 0.5rem 0;
+}
+section a {
+    position: relative;
+    font-family: JostB, verdana;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+
+    margin: 0.5rem 1.5rem;
+    padding: 0.5rem 3rem;
+}
+section a:hover {
+    color: #fcff91;
+}
+section hr {
+    background-color: #969696;
+    border: 0;
+    height: 3px;
+}
+
+.img-container {
+    text-align: center;
+    margin: 0;
+}
+.img-container img {
+    height: auto;
+    width: 60%;
+    border: 3px solid black;
+}
+
+.link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen {
+    header h1 {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    section p {
+        font-size: 1.15rem;
+    }
+    section ul {
+        font-size: 1.15rem;
+    }
+    section a {
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width:50rem) {
+    header h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    nav a {
+        font-size: 1.9rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+    }
+    section p {
+        font-size: 1rem;
+    }
+    section ul {
+        font-size: 1rem;
+    }
+    section a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:31.25rem) {
+    header h1 {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+
+    nav a {
+        font-size: 1.8rem;
+    }
+
+    section {
+        margin: 0 1.5rem 0 1.5rem;
+    }
+    section h2 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    section p {
+        font-size: 0.9rem;
+    }
+    section ul {
+        font-size: 0.9rem;
+    }
+    section a {
+        font-size: 0.9rem;
+    }
+}
