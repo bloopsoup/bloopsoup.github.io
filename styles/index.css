@@ -48,12 +48,6 @@ nav a {
 .deco {
     position: absolute;
 }
-.block1 {
-    animation: up1 1.3s infinite alternate;
-}
-.block2 {
-    animation: up2 0.8s infinite alternate;
-}
 .circle {
     background-color: #cecece;
     border-radius: 50%;
@@ -88,19 +82,11 @@ nav a {
         bottom: 100px;
         right: -5%;
     }
-    @keyframes up1 {
-        from {bottom: 100px;}
-        to {bottom: 105px;}
-    }
     .block2 {
         bottom: 160px;
         right: 7%;
         height: 3rem;
         width: 3rem;
-    }
-    @keyframes up2 {
-        from {bottom: 160px;}
-        to {bottom: 166px;}
     }
     .c1 {
         left: -12%;
@@ -137,31 +123,23 @@ nav a {
         height: 3rem;
         width: 3rem;
     }
-    @keyframes up1 {
-        from {bottom: 70px;}
-        to {bottom: 75px;}
-    }
     .block2 {
-        bottom: 120px;
+        bottom: 115px;
         right: 11%;
         height: 2rem;
         width: 2rem;
     }
-    @keyframes up2 {
-        from {bottom: 120px;}
-        to {bottom: 125px;}
-    }
     .c1 {
-        left: 0%;
+        left: -12%;
         height: 7rem;
         width: 7rem;
-        bottom: 111px;
+        bottom: 80px;
     }
     .c2 {
-        left: -10%;
+        left: -20%;
         height: 4rem;
         width: 4rem;
-        bottom: 80px;
+        bottom: 48px;
     }
 }
 
@@ -184,15 +162,27 @@ nav a {
     }
 
     .block1 {
-        display: none;
+        bottom: 40px;
+        right: -3%;
+        height: 2rem;
+        width: 2rem;
     }
     .block2 {
-        display: none;
+        bottom: 70px;
+        right: 12%;
+        height: 1.25rem;
+        width: 1.25rem;
     }
     .c1 {
-        display: none;
+        left: -14%;
+        height: 4rem;
+        width: 4rem;
+        bottom: 47px;
     }
     .c2 {
-        display: none;
+        left: -19%;
+        height: 2rem;
+        width: 2rem;
+        bottom: 30px;
     }
 }
