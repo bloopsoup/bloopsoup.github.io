@@ -1,10 +1,20 @@
 /* Specific styling for the homepage. */
 
 main {
+    flex-flow: row;
     justify-content: center;
     align-items: center;
 
     height: 100vh;
+}
+
+.menu {
+    flex-basis: 0;
+    padding: 0 2rem;
+}
+.graphic {
+    flex-basis: 0;
+    padding: 0 2rem;
 }
 
 /* FLEXBOX SUB-ELEMENTS */
@@ -60,16 +70,23 @@ nav a {
 
 @media screen {
     header h1 {
-        font-size: 8rem;
-        line-height: 7rem;
+        font-size: 7rem;
+        line-height: 6rem;
     }
 
     nav a {
         margin: 0 0.625rem 0.625rem 0.625rem;
     }
+
+    .ground-scale {
+        width: 35rem;
+    }
+    .graphic-scale {
+        width: 30rem;
+    }
 }
 
-@media screen and (max-width:50rem) {
+@media screen and (max-width:68.75rem) {
     header h1 {
         font-size: 5rem;
         line-height: 4.5rem;
@@ -81,11 +98,32 @@ nav a {
     }
 
     .ground-scale {
-        width: 25rem;
+        width: 27rem;
+    }
+    .graphic-scale {
+        width: 22rem;
     }
 }
 
-@media screen and (max-width:31.25rem) {
+@media screen and (max-width:50rem) {
+    header h1 {
+        font-size: 4.25rem;
+        line-height: 3.75rem;
+    }
+
+    .ground-scale {
+        width: 20rem;
+    }
+    .graphic-scale {
+        width: 17rem;
+    }
+}
+
+@media screen and (max-width:41.25rem) {
+    .graphic {
+        display: none;
+    }
+
     header h1 {
         font-size: 3rem;
         line-height: 2.5rem;
@@ -101,5 +139,8 @@ nav a {
 
     .ground-scale {
         width: 15rem;
+    }
+    .graphic-scale {
+        display: none;
     }
 }
