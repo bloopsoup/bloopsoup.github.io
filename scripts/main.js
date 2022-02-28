@@ -1,4 +1,4 @@
-var images = ['images/shops.svg', 'images/calm.svg', 'images/window.svg'];
+var images = ['images/shops.svg', 'images/calm.svg', 'images/window.svg', 'images/branch.svg'];
 
 /* Picks a random image and displays it in the randomImage <img> tag. */
 function displayRandomImage() {
