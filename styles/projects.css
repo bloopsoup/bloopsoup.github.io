@@ -4,7 +4,7 @@ main {
     min-height: 100vh;
 }
 
-/* FLEXBOX SUB-ELEMENTS */
+/* BASE ELEMENTS */
 
 header {
     margin: 1rem 0 0 0;
@@ -27,11 +27,9 @@ nav a {
     margin: 0 0.625rem 0 0.625rem;
 }
 
-.main-column {
-    display: grid;
-    justify-content: center;
-}
 section {
+    display: flex;
+    flex-flow: row;
     position: relative;
 
     margin: 0 3.5rem 0 3.5rem;
@@ -53,7 +51,6 @@ section p {
 section ul {
     font-family: Jost, verdana;
     color: black;
-
     margin: 0 0 1rem 0;
 }
 section li {
@@ -69,20 +66,33 @@ section a {
     margin: 0.5rem 1.5rem;
     padding: 0.5rem 3rem;
 }
-
 section hr {
     background-color: #969696;
     border: 0;
     height: 3px;
+    width: 100%;
+}
+
+/* CUSTOM ELEMENTS */
+
+.main-column {
+    display: grid;
+    justify-content: center;
+}
+
+.txt-container {
+    flex: 1;
 }
 
 .img-container {
-    text-align: center;
-    margin: 0;
+    display: flex;
+    flex: 1.5;
+    justify-content: center;
+    align-items: center;
 }
 .img-container img {
     height: auto;
-    width: 60%;
+    width: 80%;
     border: 3px solid black;
 }
 
@@ -123,6 +133,15 @@ section hr {
     }
     section a {
         font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width:75rem) {
+    section {
+        flex-flow: column;
+    }
+    .img-container img {
+        width: 60%;
     }
 }
 

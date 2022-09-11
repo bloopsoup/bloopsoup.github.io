@@ -1,5 +1,12 @@
 /* Specific styling for the homepage. */
 
+@keyframes floaty {
+    from {bottom: 0;}
+    to {bottom: 0.6rem;}
+}
+
+/* BASE ELEMENTS */
+
 main {
     flex-flow: row;
     justify-content: center;
@@ -7,17 +14,6 @@ main {
 
     height: 100vh;
 }
-
-.menu {
-    flex-basis: 0;
-    padding: 0 2rem;
-}
-.graphic {
-    flex-basis: 0;
-    padding: 0 2rem;
-}
-
-/* FLEXBOX SUB-ELEMENTS */
 
 header {
     display: flex;
@@ -35,10 +31,6 @@ header h1 {
     transition: color 0.5s;
     animation: floaty 1.4s infinite alternate;
 }
-@keyframes floaty {
-    from {bottom: 0;}
-    to {bottom: 0.6rem;}
-}
 
 nav {
     justify-content: center;
@@ -52,6 +44,21 @@ nav a {
 
     bottom: 0;
     transition: bottom 0.5s;
+}
+
+/* CUSTOM ELEMENTS */
+
+.menu {
+    flex-basis: 0;
+    padding: 0 2rem;
+}
+.graphic-box {
+    flex-basis: 0;
+    padding: 0 2rem;
+}
+.graphic {
+    position: relative;
+    animation: floaty 1.7s infinite alternate;
 }
 
 /* MEDIA QUERIES */
@@ -78,10 +85,10 @@ nav a {
         margin: 0 0.625rem 0.625rem 0.625rem;
     }
 
-    .ground-scale {
+    .ground {
         width: 35rem;
     }
-    .graphic-scale {
+    .graphic {
         width: 30rem;
     }
 }
@@ -97,33 +104,29 @@ nav a {
         font-size: 1.5rem;
     }
 
-    .ground-scale {
+    .ground {
         width: 27rem;
     }
-    .graphic-scale {
+    .graphic {
         width: 22rem;
     }
 }
 
-@media screen and (max-width:50rem) {
+@media screen and (max-width:56rem) {
     header h1 {
         font-size: 4rem;
         line-height: 3.5rem;
     }
 
-    .ground-scale {
+    .ground {
         width: 20rem;
     }
-    .graphic-scale {
+    .graphic {
         width: 17rem;
     }
 }
 
 @media screen and (max-width:41.25rem) {
-    .graphic {
-        display: none;
-    }
-
     header h1 {
         font-size: 3rem;
         line-height: 2.5rem;
@@ -137,10 +140,13 @@ nav a {
         font-size: 1.3rem;
     }
 
-    .ground-scale {
+    .ground {
         width: 15rem;
     }
-    .graphic-scale {
+    .graphic-box {
+        display: none;
+    }
+    .graphic {
         display: none;
     }
 }
