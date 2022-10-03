@@ -53,10 +53,16 @@ nav a {
     padding: 0 2rem;
 }
 .graphic-box {
-    flex-basis: 0;
-    padding: 0 2rem;
+    padding: 0 0;
+    overflow: hidden;
+}
+.graphic-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 .graphic {
+    flex-shrink: 0;
     position: relative;
     animation: floaty 1.7s infinite alternate;
 }
@@ -88,7 +94,7 @@ nav a {
     .ground {
         width: 35rem;
     }
-    .graphic {
+    .graphic-box {
         width: 30rem;
     }
 }
@@ -107,7 +113,7 @@ nav a {
     .ground {
         width: 27rem;
     }
-    .graphic {
+    .graphic-box {
         width: 22rem;
     }
 }
@@ -121,7 +127,7 @@ nav a {
     .ground {
         width: 20rem;
     }
-    .graphic {
+    .graphic-box {
         width: 17rem;
     }
 }
