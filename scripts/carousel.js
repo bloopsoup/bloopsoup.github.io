@@ -4,7 +4,6 @@ class FlexContinuousCarousel {
     constructor(images) {
         this.images = images;
         this.next = this.next.bind(this), this.reset = this.reset.bind(this);
-        document.querySelector('.graphic-track').addEventListener('transitionend', () => this.reset());
         document.querySelectorAll('.graphic')[0].src = this.getRandomImage();
     }
 
@@ -14,8 +13,9 @@ class FlexContinuousCarousel {
         const [ left, right ] = document.querySelectorAll('.graphic');
         const next = left.style.order == 2 ? left : right;
         next.src = this.getRandomImage();
-        document.querySelector('.graphic-track').style.transition = 'transform 0.5s ease-in-out';
+        document.querySelector('.graphic-track').style.transition = 'transform 2s ease-in-out';
 		document.querySelector('.graphic-track').style.transform = 'translateX(-100%)';
+        setTimeout(this.reset, 2000);
     }
 
     reset() {
@@ -28,4 +28,4 @@ class FlexContinuousCarousel {
 }
 
 const carousel = new FlexContinuousCarousel(['shops', 'calm', 'window', 'branch', 'button', 'numbers', 'time']);
-setInterval(carousel.next, 3000);
+setInterval(carousel.next, 5000);

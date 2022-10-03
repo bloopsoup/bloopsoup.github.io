@@ -97,6 +97,9 @@ nav a {
     .graphic-box {
         width: 30rem;
     }
+    .graphic {
+        width: 30rem;
+    }
 }
 
 @media screen and (max-width:68.75rem) {
@@ -116,6 +119,9 @@ nav a {
     .graphic-box {
         width: 22rem;
     }
+    .graphic {
+        width: 22rem;
+    }
 }
 
 @media screen and (max-width:56rem) {
@@ -128,6 +134,9 @@ nav a {
         width: 20rem;
     }
     .graphic-box {
+        width: 17rem;
+    }
+    .graphic {
         width: 17rem;
     }
 }
