@@ -14,7 +14,7 @@ class FlexContinuousCarousel {
         const next = left.style.order == 2 ? left : right;
         next.src = this.getRandomImage();
         document.querySelector('.graphic-track').style.transition = 'transform 2s ease-in-out';
-		document.querySelector('.graphic-track').style.transform = 'translateX(-100%)';
+        document.querySelector('.graphic-track').style.transform = 'translateX(-100%)';
         setTimeout(this.reset, 2000);
     }
 
@@ -23,7 +23,7 @@ class FlexContinuousCarousel {
         left.style.order = left.style.order == 1 ? 2 : 1;
         right.style.order = right.style.order == 1 ? 2 : 1;
         document.querySelector('.graphic-track').style.transition = 'inherit';
-		document.querySelector('.graphic-track').style.transform = 'translateX(0)';
+        document.querySelector('.graphic-track').style.transform = 'translateX(0)';
     }
 }
 
