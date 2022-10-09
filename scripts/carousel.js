@@ -2,17 +2,24 @@ class FlexContinuousCarousel {
     /* Manages shifting between images in a gallery. */
 
     constructor(images) {
-        this.images = images;
+        this.images = images, this.currentImage = "";
         this.next = this.next.bind(this), this.reset = this.reset.bind(this);
-        document.querySelectorAll('.graphic')[0].src = this.getRandomImage();
+        this.setCurrentImage();
+        document.querySelectorAll('.graphic')[0].src = this.getCurrentImage();
     }
 
-    getRandomImage() { return `images/${this.images[Math.floor(Math.random() * this.images.length)]}.svg`; }
+    getCurrentImage() { return `images/${this.currentImage}.svg`; }
+
+    setCurrentImage() {
+        const images = this.images.filter(i => i !== this.currentImage);
+        this.currentImage = images[Math.floor(Math.random() * images.length)]
+    }
 
     next() {
         const [ left, right ] = document.querySelectorAll('.graphic');
         const next = left.style.order == 2 ? left : right;
-        next.src = this.getRandomImage();
+        this.setCurrentImage();
+        next.src = this.getCurrentImage();
         document.querySelector('.graphic-track').style.transition = 'transform 2s ease-in-out';
         document.querySelector('.graphic-track').style.transform = 'translateX(-100%)';
         setTimeout(this.reset, 2000);
