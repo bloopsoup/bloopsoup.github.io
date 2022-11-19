@@ -34,5 +34,5 @@ class FlexContinuousCarousel {
     }
 }
 
-const carousel = new FlexContinuousCarousel(['shops', 'calm', 'window', 'branch', 'button', 'numbers', 'time']);
+const carousel = new FlexContinuousCarousel(['shops', 'calm', 'window', 'branch', 'button', 'numbers', 'time', 'world']);
 setInterval(carousel.next, 5000);
