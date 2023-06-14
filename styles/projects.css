@@ -60,17 +60,14 @@ section a {
     position: relative;
     font-family: JostB, verdana;
     background-color: black;
+    border-radius: 20px;
     color: white;
+    text-align: center;
     text-decoration: none;
+    box-shadow: 0px 5px 5px rgb(216, 216, 216);
 
     margin: 0.5rem 1.5rem;
     padding: 0.5rem 3rem;
-}
-section hr {
-    background-color: #969696;
-    border: 0;
-    height: 3px;
-    width: 100%;
 }
 
 /* CUSTOM ELEMENTS */
@@ -82,6 +79,9 @@ section hr {
 
 .txt-container {
     flex: 1;
+    border-radius: 16px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1.5rem 1rem;
 }
 
 .img-container {
@@ -91,12 +91,15 @@ section hr {
     align-items: center;
 }
 .img-container img {
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px rgb(216, 216, 216);
     height: auto;
     width: 80%;
 }
 
 .link-container {
     display: flex;
+    flex-flow: column;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -135,12 +138,15 @@ section hr {
     }
 }
 
-@media screen and (max-width:75rem) {
+@media screen and (max-width:65rem) {
     section {
         flex-flow: column;
     }
+    .img-container {
+        padding: 1.5rem 0;
+    }
     .img-container img {
-        width: 60%;
+        width: 100%;
     }
 }
 
