@@ -17,7 +17,7 @@ class FlexContinuousCarousel {
 
     /** Gets the current image as a path to the actual image file.
      *  @returns {string} The path to the image file. */
-    #getCurrentImage() { return `images/${this.#currentImage}.svg`; }
+    #getCurrentImage() { return `assets/svgs/${this.#currentImage}.svg`; }
 
     /** Changes the current image to another random image. */
     #setCurrentImage() {

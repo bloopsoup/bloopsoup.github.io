@@ -4,28 +4,28 @@
 
 @font-face {
     font-family: "Staatliches";
-    src: url("../fonts/Staatliches-Regular.ttf") format("truetype");
+    src: url("../assets/fonts/Staatliches-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Jost";
-    src: url("../fonts/Jost-Regular.ttf") format("truetype");
+    src: url("../assets/fonts/Jost-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "JostB";
-    src: url("../fonts/Jost-SemiBold.ttf") format("truetype");
+    src: url("../assets/fonts/Jost-SemiBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "JostBB";
-    src: url("../fonts/Jost-ExtraBold.ttf") format("truetype");
+    src: url("../assets/fonts/Jost-ExtraBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
